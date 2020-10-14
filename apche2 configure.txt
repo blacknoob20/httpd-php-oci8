@@ -1,0 +1,10 @@
+./configure \
+ --prefix=/opt/apache2/2.4.41 \
+ --enable-so \
+ --with-included-apr \
+ --with-pcre=/usr/local/pcre \
+ --with-apr=/usr/local/apr/1.7.0/bin/apr-1-config \
+ --with-apr-util=/usr/local/apr-util/1.6.1/bin/apu-1-config
+
+make
+make install

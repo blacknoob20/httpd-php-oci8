@@ -1,0 +1,5 @@
+./configure \
+ --prefix=/usr/local/apr/1.7.0
+
+make
+make install

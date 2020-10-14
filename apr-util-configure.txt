@@ -1,0 +1,4 @@
+./configure \
+ --prefix=/usr/local/apr-util/1.6.1 \
+ --with-apr=/usr/local/apr/1.7.0/bin/apr-1-config \
+ --with-expat=/usr/local/expat/2.2.8

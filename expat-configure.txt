@@ -1,0 +1,5 @@
+./configure \
+ --prefix=/usr/local/expat/2.2.8
+ 
+make
+make install
