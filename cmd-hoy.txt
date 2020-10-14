@@ -1,0 +1,493 @@
+    1  nano /etc/lsb-release 
+    2  rm -R /Build/
+    3  exit
+    4  cd /media/
+    5  ll
+    6  ls -l
+    7  clear
+    8  ls
+    9  cd cristhian/
+   10  cd VBox_GAs_6.1.0/
+   11  ls
+   12  ./VBoxLinuxAdditions.run 
+   13  clear
+   14  apt list | grep docker
+   15  clear
+   16  cd /
+   17  clear
+   18  apt install docker
+   19  docker images
+   20  docker ps
+   21  docker help
+   22  docker statos
+   23  apt-get update
+   24  clear
+   25  docker ps
+   26  apt list docker
+   27  sudo apt remove docker
+   28  clear
+   29  sudo apt-get install     apt-transport-https     ca-certificates     curl     gnupg2     software-properties-common
+   30  curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
+   31  sudo apt-key fingerprint 0EBFCD88
+   32  sudo add-apt-repository    "deb [arch=amd64] https://download.docker.com/linux/debian \
+   33     $(lsb_release -cs) \
+   34     stable"
+   35  sudo apt-get update
+   36  sudo apt-get install docker-ce docker-ce-cli containerd.io
+   37  sudo systemctl status docker
+   38  sudo systemctl start docker
+   39  docker ps
+   40  clear
+   41  sudo usermod -aG docker cristhian
+   42  su -cristhian
+   43  su - cristhian
+   44  apt list DBeaver
+   45  apt list |gre  DBeaver
+   46  apt list |grep  DBeaver
+   47  apt update
+   48  apt list -- upgradable
+   49  apt upgrade
+   50  clear
+   51  apt install snapd
+   52  dmidecode -q
+   53  locate
+   54  locate *.txt
+   55  clear
+   56  apt list git
+   57  git clone https://github.com/oracle/docker-images.git
+   58  docker images
+   59  ls
+   60  rm -R dockerimages
+   61  ls
+   62  cd docker-images/
+   63  ls
+   64  ls -l
+   65  cd OracleDatabase/
+   66  ls
+   67  cd SingleInstance/
+   68  ls
+   69  cd dockerfiles/
+   70  ls -l
+   71  cat buildDockerImage.sh 
+   72  clear
+   73  ./buildDockerImage.sh -v 18.4.0 -x
+   74  ls
+   75  ./buildDockerImage.sh -v 18.4.0 -x
+   76  clear
+   77  cd /
+   78  docker pull postgres:12.2-alpine
+   79  docker images
+   80  docker rm -fv 3ba0062c7cf3
+   81  docker rmi 3ba0062c7cf3
+   82  clear
+   83  docker images
+   84  docker run -d -p 5432:5432 -e "POSTGRES_PASSWORD=root" -e "POSTGRES_USER=rene" -e "POSTGRES_DB=prueba" --name postgres12 postgres:12.2-alpine
+   85  docker ps
+   86  sudo snap install dbeaver-ce
+   87  sudo snap install dbeaver-ce
+   88  sudo snap install dbeaver-ce
+   89  flatpak install flathub io.dbeaver.DBeaverCommunity
+   90  cd /var/lib/docker/volumes/
+   91  ls
+   92  ls -l
+   93  cd 7690d9ed55613a5cd6b9875f185dbf81ca27d86bf984d6f478ca0edbc55ef52d/
+   94  ls
+   95  cd _data/
+   96  ls
+   97  ls -l
+   98  cd base/
+   99  ls
+  100  cd ..
+  101  cd pg_tblspc/
+  102  ls
+  103  cd /
+  104  flatpak install flathub io.dbeaver.DBeaverCommunity
+  105  docker images
+  106  ls -l /
+  107  ls
+  108  cd Descargas/
+  109  mv startbootstrap /opt/
+  110  cd /opt/
+  111  ls
+  112  clear
+  113  docker images
+  114  chown cristhian:cristhian docker-images/
+  115  chown cristhian:cristhian /home/cristhian/docker-images/
+  116  mkdir /opt/source1
+  117  mv /opt/startbootstrap/ /opt/source1/
+  118  mv /opt/source1/startbootstrap/ /home/cristhian/Descargas/
+  119  cd source1/
+  120  ls -l
+  121  docker run -d -p 5555:80 -e "ENV=dev" -e "VIRTUALIZATION=docker" -m "50Mb" --cpuset-cpus 0 -v /opt/source1/:/var/wwww/html/ --name http7 apache-php:httpd7
+  122  docker run -d -p 5555:80 -e "ENV=dev" -e "VIRTUALIZATION=docker" -m "50Mb" --cpuset-cpus 0 -v /opt/source1/:/var/wwww/html/ --name http7 apache-php:httpd7
+  123  ls
+  124  ls -l
+  125  docker volumen ls
+  126  docker volume ls
+  127  chmod 777 .
+  128  docker run -d -p 5555:80 -e "ENV=dev" -e "VIRTUALIZATION=docker" -m "50Mb" --cpuset-cpus 0 -v /opt/source1/:/var/wwww/html/ --name http7 apache-php:httpd7
+  129  ls
+  130  cd ..
+  131  docker run -d -p 5555:80 -e "ENV=dev" -e "VIRTUALIZATION=docker" -m "50Mb" --cpuset-cpus 0 -v /opt/source1/:/var/www/html/ --name http7 apache-php:httpd7
+  132  cd source1/
+  133  ls -l
+  134  chmod -R 777 /opt/
+  135  ls -l
+  136  cd ..
+  137  ls -l
+  138  cd source1/
+  139  ls -l
+  140  ls -l
+  141  chown -R 777 cristhian:crishian
+  142  chown -R 777 cristhian:crishian /opt/
+  143  chown -R cristhian:crishian /opt/
+  144  chown -R cristhian:cristhian /opt/
+  145  ls -l /opt/
+  146  ls -l /opt/source1/
+  147  ls -l /opt/source1/
+  148  docker run -d -p 5555:80 -e "ENV=dev" -e "VIRTUALIZATION=docker" -m "50Mb" --cpuset-cpus 0 -v /opt/source1/:/var/wwww/html/ --name http7 apache-php:httpd7
+  149  ls -l /opt/source1/
+  150  ls -l /opt/source1/
+  151  ls -l /opt/source1/
+  152  ls -l /opt/source1/
+  153  ls -l /opt
+  154  chown -R root:root /opt/
+  155  docker restart hhtp7
+  156  docker restart http7
+  157  ls -l /opt/source1/
+  158  chown -R root:www-data /opt/
+  159  ls -l /opt/source1/
+  160  ls -l /opt
+  161  docker restart http7
+  162  ls -l /opt/source1/
+  163  ls -l /opt/source1/
+  164  chown -R www-data:www-data /opt/
+  165  docker run -d -p 5555:80 -e "ENV=dev" -e "VIRTUALIZATION=docker" -m "50Mb" --cpuset-cpus 0 -v /opt/source1/:/var/wwww/html/ --name http7 apache-php:httpd7
+  166  ls -l /opt/source1/
+  167  ls -l /opt/source1/
+  168  cd Desc
+  169  cd Descargas/
+  170  ls
+  171  clear
+  172  dpkg -i kerio-control-vpnclient-9.3.4-3795-linux-amd64.deb 
+  173  /etc/init.d/kerio-kvc stop
+  174  /etc/init.d/kerio-kvc start
+  175  /etc/init.d/kerio-kvc stop
+  176  apt-get install build-essential binutils libcap-dev gcc g++ libc6-dev ksh libaio-dev make libxi-dev libxtst-dev libxau-dev libxcb1-dev sysstat rpm xauth unzip
+  177  /etc/init.d/kerio-kvc start
+  178  /etc/init.d/kerio-kvc stop
+  179  mkdir /opt/oracle
+  180  ls
+  181  mv Descargas/instantclient-basic-linux.x64-12.2.0.1.0.zip /opt/oracle/
+  182  cd /opt/oracle/
+  183  ls
+  184  unzip instantclient-basic-linux.x64-12.2.0.1.0.zip 
+  185  ls
+  186  mv instantclient_12_2/ client_12_2/
+  187  ls
+  188  cd client_12_2/
+  189  ln -s libclntsh.so.12.1 libclntsh.so
+  190  ln -s libocci.so.12.1 libocci.so
+  191  sudo sh -c "echo /opt/oracle/instantclient_19_3 > /etc/ld.so.conf.d/oracle-instantclient.conf"
+  192  sudo ldconfig
+  193  sudo sh -c "echo /opt/oracle/client_12_2 > /etc/ld.so.conf.d/oracle-instantclient.conf"
+  194  export LD_LIBRARY_PATH=/opt/oracle/client_12_2:$LD_LIBRARY_PATH
+  195  mkdir -p /opt/oracle/client_12_2/network/admin
+  196  export PATH=/opt/oracle/client_12_2:$PATH
+  197  cd ..
+  198  cd ..
+  199  ls -l
+  200  chmod -R 777 oracle/
+  201  ls -l
+  202  cd /oracle/client_12_2/
+  203  cd oracle/client_12_2/
+  204  ls -l
+  205  cd ..
+  206  chown -R root:root oracle/
+  207  chown -R root:root client_12_2/
+  208  clear
+  209  ls -l
+  210  cd client_12_2/
+  211  ls -l
+  212  sqlplus
+  213  featherpad network/admin/tnsnames.ora
+  214  sqlplus
+  215  /etc/init.d/kerio-kvc start
+  216  sudo snap install --classic notepadqq
+  217  snap install hello-world
+  218  apt update
+  219  apt list --upgradable
+  220  apt upgrade
+  221  apt update
+  222  apt autoclean
+  223  apt install snapd
+  224  apt remove snapd
+  225  apt install snapd
+  226  apt install snapd
+  227  snap install hello-world
+  228  systemctl enable snapd.service
+  229  systemctl start snapd.service
+  230  systemctl status snapd
+  231  snap version
+  232  apt remove snapd
+  233  wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+  234  sudo apt-get install apt-transport-https
+  235  echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+  236  sudo apt-get update
+  237  sudo apt-get install sublime-text
+  238  sublimetext
+  239  sublime-text
+  240  featherpad /etc/gdm/custom.conf
+  241  /etc/init.d/kerio-kvc start
+  242  /etc/init.d/kerio-kvc stop
+  243  /etc/init.d/kerio-kvc start
+  244  /etc/init.d/kerio-kvc stop
+  245  /etc/init.d/kerio-kvc stop
+  246  mv Descargas/jdk-8u241-linux-x64.tar.gz /opt/java/
+  247  mkdir /opt/java
+  248  mv Descargas/jdk-8u241-linux-x64.tar.gz /opt/java/
+  249  cd /opt/java/
+  250  ls
+  251  tar zxvf jdk-8u241-linux-x64.tar.gz 
+  252  dpkg -i /home/cristhian/Descargas/smartgit-19_1_7.deb 
+  253  apt install libcurl
+  254  apt list | grep libcurl
+  255  mv /opt/java/jdk-8u241-linux-x64.tar.gz /media/sf_Public/Downloads/
+  256  cd ..
+  257  cd oracle/client_12_2/sqldeveloper/
+  258  ls -l
+  259  ./sqldeveloper.sh 
+  260  /etc/init.d/kerio-kvc start
+  261  ls -l /var/www/
+  262  subl /var/www/html/info.php
+  263  sublime-text /var/www/html/info.php
+  264  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl  --with-openssl 
+  265  cd /opt/oracle/client_12_2/
+  266  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl  --with-openssl 
+  267  cd ..
+  268  cd ..
+  269  cd php/
+  270  ls
+  271  cd 5.4.45/
+  272  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl  --with-openssl \
+  273  ls
+  274  cd /usr/local/src/
+  275  ls
+  276  cd php5-build/
+  277  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl  --with-openssl 
+  278  ls
+  279  cd php-5.4.45
+  280  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl  --with-openssl 
+  281  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl 
+  282  apt-get install libcurl4-gnutls-dev
+  283  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl 
+  284  aptitude install libcurl3-dev
+  285  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt  --with-curl 
+  286  apt-get install libcurl4-openssl-dev
+  287  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp  --with-mcrypt 
+  288  ./configure  --prefix=/opt/php/5.4.45  --with-oci8=shared,instantclient,/opt/oracle/client_12_2/  --enable-mbstring  --enable-soap  --enable-cgi  --with-bz2  --with-zlib  --enable-sockets  --enable-sysvsem  --enable-sysvshm  --enable-pcntl  --enable-mbregex  --with-mhash  --enable-zip  --with-pcre-regex  --enable-ftp 
+  289  make
+  290  make install
+  291  make test
+  292  cd /usr/local
+  293  ls
+  294  mkdir apr
+  295  mkdir apr-util
+  296  cd apr/
+  297  mkdir 1.7.0
+  298  pwd
+  299  cd ..
+  300  cd src/apache2-build/httpd-2.4.41/srclib/apr
+  301  ./configure --prefix=/usr/local/apr/1.7.0
+  302  make
+  303  make install
+  304  cd ..
+  305  cd apr-util/
+  306  ./configure --with-apr=/usr/local/apr/1.7.0/bin/apr-1-config
+  307  make
+  308  ./configure --with-apr=/usr/local/apr/1.7.0/bin/apr-1-config --with-expat=/usr/local/expat/2.2.8
+  309  clear
+  310  ./configure  --prefix=/usr/local/apr-util/1.6.1  --with-apr=/usr/local/apr/1.7.0/bin/apr-1-config  --with-expat=/usr/local/expat/2.2.8
+  311  make
+  312  make install
+  313  cd /
+  314  locate apxs
+  315  locate apxs2
+  316  ls /usr/local/
+  317  ls /usr/local/etc/
+  318  ls /usr/local/src/
+  319  ls /opt/
+  320  apt list | grep apache
+  321  apt list | grep http
+  322  apt list --installed
+  323  apt list --installed | grep apache2
+  324  apt remove apache2
+  325  apt list --installed | grep apache2
+  326  apt list --installed | grep PCRE
+  327  apt list --installed | grep OpenSSL
+  328  cd /usr/local/pcre-build/
+  329  ls
+  330  cd pcre-8.44/
+  331  ./configure --help
+  332  ./configure --help > /home/cristhian/Documentos/pcre-configure-help.txt
+  333  cd ..
+  334  cd ..
+  335  mv pcre-build /usr/local/src/
+  336  cd src/
+  337  ls
+  338  mkdir expat-build
+  339  cd expat-build/
+  340  mv /home/cristhian/Descargas/expat-2.2.8.tar.gz .
+  341  tar zxfv expat-2.2.8.tar.gz 
+  342  ls
+  343  mv expat-2.2.8.tar.gz /media/sf_Public/Downloads/
+  344  clear
+  345  cd expat-2.2.8/
+  346  ./configure --prefix=/usr/local/expat/2.2.8
+  347  make
+  348  make install
+  349  /etc/init.d/kerio-kvc stop
+  350  cd /opt/php/5.4.45/
+  351  ls
+  352  cd php/
+  353  ls
+  354  cd ..
+  355  ls /lib
+  356  clear
+  357  cd /usr/local/src/php5-build/
+  358  ls
+  359  cd php-5.4.45
+  360  ls
+  361  cp php.ini-development cd ..
+  362  cd ..
+  363  cd ..
+  364  mkdir apache2-build
+  365  cd apache2-build/
+  366  mv /home/cristhian/Descargas/httpd-2.4.41.tar.gz /usr/local/src/apache2-build/
+  367  ls
+  368  tar zxvf httpd-2.4.41.tar.gz 
+  369  clear
+  370  ls
+  371  mkdir /opt/apache2/2.4.41
+  372  mkdir /opt/apache2
+  373  mkdir /opt/apache2/2.4.41
+  374  cd httpd-2.4.41
+  375  ./configure --help > /home/cristhian/Documentos/http-configure-help.txt
+  376  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so
+  377  ls
+  378  mkdir srclib
+  379  ls
+  380  cd ..
+  381  cd httpd-2.4.41
+  382  cd srclib/
+  383  vm /home/cristhian/Descargas/*.gz .
+  384  mv /home/cristhian/Descargas/*.gz .
+  385  ls
+  386  tar zxvf apr-1.7.0.tar.gz 
+  387  tar zxvf apr-util-1.6.1.tar.gz 
+  388  clear
+  389  ls
+  390  mv apr-1.7.0 apr
+  391  mv apr-util-1.6.1 apr-util
+  392  mv apr-1.7.0.tar.gz /media/sf_Public/Downloads/
+  393  mv apr-util-1.6.1.tar.gz /media/sf_Public/Downloads/
+  394  ls
+  395  cd ..
+  396  cd ..
+  397  mv httpd-2.4.41.tar.gz /media/sf_Public/Downloads/
+  398  clear
+  399  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr
+  400  ls
+  401  cd httpd-2.4.41/
+  402  ls
+  403  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr
+  404  cd ..
+  405  cd ..
+  406  cd ..
+  407  mkdir pcre
+  408  ls
+  409  mkdir pcre-build
+  410  cd pcre-b
+  411  cd pcre-build/
+  412  vm /home/cristhian/Descargas/pcre-8.44.tar.gz .
+  413  mv /home/cristhian/Descargas/pcre-8.44.tar.gz .
+  414  ./configure --prefix=/usr/local/pcre
+  415  tar zxvf pcre-8.44.tar.gz 
+  416  ls
+  417  mv pcre-8.44.tar.gz /media/sf_Public/Downloads/
+  418  cd pcre-8.44/
+  419  ./configure --prefix=/usr/local/pcre
+  420  make
+  421  make install
+  422  cd /usr/local/src/apache2-build/httpd-2.4.41/
+  423  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr
+  424  clear
+  425  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr  --with-pcre=/usr/local/pcre
+  426  make
+  427  clear
+  428  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr  --with-pcre=/usr/local/pcre
+  429   --with-expat=/usr/local/expat/2.2.8./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr  --with-pcre=/usr/local/pcre  --with-expat=/usr/local/expat/2.2.8
+  430   --with-expat=/usr/local/expat/2.2.8./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr  --with-pcre=/usr/local/pcre  --with-expat=/usr/local/expat/2.2.8
+  431  clear
+  432  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr  --with-pcre=/usr/local/pcre
+  433  make
+  434  ls
+  435  srclib/apr/configure --help > /home/cristhian/Documentos/apr-configure-help.txt
+  436  srclib/apr-util/configure --help > /home/cristhian/Documentos/apr-util-configure-help.txt
+  437  clear
+  438  ./configure  --prefix=/opt/apache2/2.4.41  --enable-so  --with-included-apr  --with-pcre=/usr/local/pcre  --with-apr=/usr/local/apr/1.7.0/bin/apr-1-config  --with-apr-util=/usr/local/apr-util/1.6.1/bin/apu-1-config
+  439  make
+  440  make install
+  441  featherpad /usr/share/applications/sqldeveloper.desktop
+  442  apt list systemd-ui
+  443  apt-get list systemd-ui
+  444  apt list systemd
+  445  apt list | grep systemd-ui
+  446  apt list | grep systemd-
+  447  clear
+  448  gcc --version
+  449  ld --version
+  450  echo $BUILD_CLI
+  451  cd /usr/local/src/php5-build/php-5.4.45/sapi/cli/
+  452  ls
+  453  cd ..
+  454  cd cgi/
+  455  ls
+  456  cp php-cgi.1.in php-cgi.1
+  457  ls
+  458  cd ..
+  459  ls
+  460  ls
+  461  cd ..
+  462  cd scripts/
+  463  ls
+  464  cp php-config.in php-config.1
+  465  cp phpize.in phpize.1
+  466  ls
+  467  cd man1/
+  468  ls
+  469  cp php-config.1.in php-config.1
+  470  cp phpize.1.in phpize.1
+  471  ls
+  472  cd ..
+  473  cd ..}
+  474  cd ..}
+  475  cd ..
+  476  cd ext/phar/
+  477  ls
+  478  cp phar.1.in phar.1
+  479  cp phar.phar.1.in phar.phar.1
+  480  cd /opt/php/5.4.45/
+  481  ls
+  482  cd lib
+  483  ls
+  484  ls -l
+  485  cd php/
+  486  ls
+  487  cd ..
+  488  cd ..
+  489  pwd
+  490  ls etc/
+  491  cp /usr/local/src/php5-build/php.ini-development ./php.ini
+  492  ls
+  493  history > /home/cristhian/Documentos/cmd-hoy.txt

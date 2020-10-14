@@ -1,0 +1,104 @@
+# [OpenSSL DIR]
+openssl version -d
+# [Kerio VPN]
+------------------------------------------
+/etc/init.d/kerio-kvc stop
+/etc/init.d/kerio-kvc start
+
+/var/log/kerio-kvc/init.log 
+/var/log/kerio-kvc/error.log
+/var/log/kerio-kvc/debug.log
+
+# [%CPU y RAM]
+ps aux --width 30 --sort -rss | head
+## Listar procesos by ram usage
+ps -o pid,user,%mem,command ax | sort -b -k3 -r
+
+# [Limpiar CACHE]
+sync; echo 3 > /proc/sys/vm/drop_caches
+
+# [Apache]
+------------------------------------------
+/opt/apache2/2.4.41/bin/apachectl start
+/opt/apache2/2.4.41/bin/apachectl stop
+/opt/apache2/2.4.41/bin/apachectl restart
+
+#[WineHQ]
+------------------------------------------
+wine "C:\\Program Files\\PLSQL Developer\\plsqldev.exe"
+
+#Crear acceso directo en el menú
+sudo featherpad /usr/share/applications/sqldeveloper.desktop
+
+#[XDebug 2.4.1]
+------------------------------------------
+# Innstalar XDebug 2.4.1 para PHP 5.4
+pecl install xebug-2.4.1
+
+#[SQLPLUS]
+------------------------------------------
+/opt/oracle/client_12_2/sqlplus
+# Ejecutar archivos
+## DES
+### PF
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PF_SOLVACACION.pck
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PF_ACCIONPERSONAL.pck
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PF_EMPLEADOHORARIO.pck
+### PQ
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PQ_EMPLEADO.pck
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PQ_EMPLEADOHORARIO.pck
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PQ_ACCIONPERSONAL.pck
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PQ_TIPORANCHO.pck
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PQ_EMPLEADOXRANCHO.pck
+@/media/sf_Public/git/oracle.plsql/Packages/RH/RH_PQ_CARGAINICIALVACACION.pck
+
+# PRE
+## PF
+@/media/sf_Public/git/oracle.plsql.prep/Packages/RH/RH_PF_SOLVACACION.pck
+@/media/sf_Public/git/oracle.plsql.prep/Packages/RH/RH_PF_ACCIONPERSONAL.pck
+## PQ
+@/media/sf_Public/git/oracle.plsql.prep/Packages/RH/RH_PQ_EMPLEADO.pck
+@/media/sf_Public/git/oracle.plsql.prep/Packages/RH/RH_PQ_CARGAINICIALVACACION.pck
+
+# PRO
+## PF
+@/media/sf_Public/git/oracle.plsql.prod/Packages/RH/RH_PF_SOLVACACION.pck
+@/media/sf_Public/git/oracle.plsql.prod/Packages/RH/RH_PF_ACCIONPERSONAL.pck
+
+# Exportar paquete
+SET HEAD OFF
+SET ECHO OFF
+SET FEED OFF
+SET TERM OFF
+SET LINE 4000
+SET long 90000
+SET NEWPAGE NONE
+SET WRAP OFF
+set pagesize 0
+SPOOL /media/sf_Public/git/RH_PF_SOLVACACION.pck
+select dbms_metadata.get_ddl('PACKAGE','RH_PF_SOLVACACION') p from dual;
+SPOOL OFF
+
+#[LOGS]
+------------------------------------------
+# RAIZ
+/usr/local/apache2/htdocs/sgpplus/
+## DES
+/var/log/sgpplus/rh/rh/error-2020-04.log
+/var/log/sgpplus/rh/rh/error-2020-05.log
+/var/log/sgpplus/se/error-2020-04.log
+## PRE
+/var/log/sgppluspre/rh/rh/error-2020-04.log
+------------------------------------------
+## Apache
+------------------------------------------
+### CONF
+/usr/local/apache2/conf/extra/httpd-vhosts.conf
+/usr/local/apache2/logs/error_log
+### PRE
+/usr/local/apache2/logs/sgppluspre/error_log
+
+#[SUBLIME TEXT]
+------------------------------------------
+#BORRAR ESPACIOS EN BLANCO
+[^\S\r\n]+$
